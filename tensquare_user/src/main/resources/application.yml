@@ -1,0 +1,27 @@
+server: 
+  port: 9008
+spring: 
+  application:  
+    name: tensquare-user #指定服务名
+  datasource:  
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.72.130:3306/tensquare_user?characterEncoding=UTF8
+    username: root
+    password: root
+  jpa: 
+    database: MySQL
+    show-sql: true
+  redis:
+    host: 192.168.72.130
+  rabbitmq:
+    host: 192.168.72.130
+jwt:
+  config:
+    key: itcast #设置生成jwt的盐,任何时候这个key都不要提供给别人
+    ttl: 3600000 #设置jwt的过期时间,设置为1小时
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true

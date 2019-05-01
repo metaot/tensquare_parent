@@ -1,0 +1,12 @@
+server:
+  port: 9006
+spring:
+  application:
+    name: tensquare-spit #配置微服务名字,后期SpringCloud部分要使用
+  data:
+    mongodb:
+      host: 192.168.72.130 #Mongodb服务的访问ip
+      port: 27017 #Mongodb服务的访问端口号
+      database: spitdb
+  redis:
+    host: 192.168.72.130

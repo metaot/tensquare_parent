@@ -1,0 +1,18 @@
+server:
+  port: 12000
+spring:
+  application:
+    name: tensquare-config
+  cloud:
+    config:
+      server:
+        git:
+          #uri配置git仓库的地址(存放微服务配置文件的仓库地址)
+          uri: https://gitee.com/itcast_xu/tensquare-config.git
+  rabbitmq:
+    host: 192.168.72.130
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
